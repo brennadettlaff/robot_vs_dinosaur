@@ -1,9 +1,11 @@
+
 class Dinosaur:
     def __init__(self):
-        self.name = ''
+        self.name = "T-Rex"
         self.health = 100
-        self.attack_power = 25
+        self.attack_power = 30
 
 
     def attack(self, robot):
-        pass
+        robot -= self.attack_power
+        print(robot)
