@@ -16,9 +16,8 @@ class Battlefield:
         print("Welcome to Robot vs Dinosaur!")
 
     def battle_phase(self):
-        self.robot.health = self.dinosaur.attack(self.robot.health)
-        self.dinosaur.health = self.robot.attack(self.dinosaur.health)
-        return(self.robot.health, self.dinosaur.health)
+        self.dinosaur.attack(self.robot)
+        self.robot.attack(self.dinosaur)
 
     def display_winner(self):
         if self.dinosaur.health <= 0:
