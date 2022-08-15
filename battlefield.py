@@ -18,4 +18,7 @@ class Battlefield:
         self.robot.attack(self.dinosaur.health)
 
     def display_winner(self):
-        pass
+        if self.dinosaur.health <= 0:
+            print("Robot wins!")
+        elif self.robot.health <= 0:
+            print("Dinosaur wins!")
